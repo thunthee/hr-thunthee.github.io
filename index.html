@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+<style>
+body {
+  font-family: "Prompt";
+  font-size: 16px;
+}
+</style>
+  </head>
+  <body>
+  <div class="row">
+      <div class="col s12 m4 offset-m4">
+          <div class="card">
+  <div class="card-action teal lighten-1 white-text">
+       <h4>ลงชื่อเข้าสู่ระบบ</h4>
+  </div>
+    <?var url = getUrl();?>
+    <form method="post" action="<?= url ?>" >
+    
+        <div class="card-content">
+           <div class="form-field">
+              <label>รหัสพนักงาน</label>
+              <input type="text" name="username" />
+           </div><br>
+           <div class="form-field">
+              <label>รหัสผ่าน</label>
+               <input type="password" name="password" />
+           </div><br>
+           <div class="form-field">
+               <button class = "btn-large wave-effect wave-dark" style = "width:100%" type="submit" value="Login" name="LoginButton">เข้าระบบ</button>
+                <span><?= message ?></span> 
+           </div><br>
+           </div>
+         </form>
+       </div>
+     </div>
+    </div>
+  </body>
+</html>
